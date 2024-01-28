@@ -1,42 +1,36 @@
-import { errors } from '@vinejs/vine'
-
+import { errors } from "@vinejs/vine";
 
 export class CustomErrorReporter {
   /**
    * A flag to know if one or more errors have been
    * reported
    */
-  hasErrors = false
+  hasErrors = false;
 
   /**
    * A collection of errors. Feel free to give accurate types
    * to this property
    */
-  errors = {}
+  errors = {};
 
   /**
    * VineJS call the report method
    */
-  report(
-    message,
-    rule,
-    field,
-    meta
-  ) {
-    this.hasErrors = true
+  report(message, rule, field, meta) {
+    this.hasErrors = true;
 
     /**
      * Collecting errors as per the JSONAPI spec
      */
-//     this.errors.push({
-//       code: rule,
-//       detail: message,
-//       source: {
-//         pointer: field.wildCardPath
-//       },
-//       ...(meta ? { meta } : {})
-//     })
-this.errors[field.wildCardPath] = message
+    //     this.errors.push({
+    //       code: rule,
+    //       detail: message,
+    //       source: {
+    //         pointer: field.wildCardPath
+    //       },
+    //       ...(meta ? { meta } : {})
+    //     })
+    this.errors[field.wildCardPath] = message;
   }
 
   /**
@@ -44,6 +38,6 @@ this.errors[field.wildCardPath] = message
    * ValidationError class
    */
   createError() {
-    return new errors.E_VALIDATION_ERROR(this.errors)
+    return new errors.E_VALIDATION_ERROR(this.errors);
   }
 }

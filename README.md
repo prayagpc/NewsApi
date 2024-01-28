@@ -1,0 +1,5 @@
+Developed a robust News API utilizing Node.js and Express.js, integrated with Prisma and PostgreSQL for database management. Implemented user authentication and authorization mechanisms, including token-based authentication with JSON Web Tokens (JWT). Ensured API security using Helmet middleware and managed session cookies for enhanced user experience. Incorporated Redis cache for efficient data caching, contributing to improved performance.
+
+Enabled CRUD operations for seamless data manipulation, while implementing thorough validation processes to ensure data integrity. Utilized Express-RedisCache for efficient caching and improved response times. Integrated Winston for comprehensive logging, aiding in debugging and monitoring. Implemented pagination for handling large datasets and a rate limiter to control API access.
+
+Additionally, incorporated file uploading functionality using Express-FileUpload for multimedia content. Validated API endpoints using Postman for thorough testing and verification. This comprehensive set of features demonstrates a well-rounded skill set in building and maintaining performant, secure, and feature-rich RESTful APIs.

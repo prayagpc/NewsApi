@@ -1,7 +1,7 @@
 import { supportedMimes } from "../config/filesystem.js";
 import { v4 as uuidv4 } from "uuid";
 import fs from "fs";
-import path from 'path';
+import path from "path";
 export const imageValidator = (size, mime) => {
   if (byesToMB(size) > 2) {
     return "Imaze size must be less than 2 MB";
@@ -25,9 +25,8 @@ export const getImageUrl = (imgName) => {
 
 export const removeImage = (imagename) => {
   // const path = process.cwd() + "/public/image/" + imagename;
-  const pathe = path.join(process.cwd(), 'public', 'images', imagename);
+  const pathe = path.join(process.cwd(), "public", "images", imagename);
   if (fs.existsSync(pathe)) {
-    
     fs.unlinkSync(pathe);
   }
 };
